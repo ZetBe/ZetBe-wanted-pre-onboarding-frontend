@@ -1,23 +1,41 @@
 import { Suspense } from 'react'
-import { Await, defer, useLoaderData } from 'react-router-dom'
+import { Await, Link, defer, useLoaderData } from 'react-router-dom'
 import TodoList from '../components/TodoList'
-import { getAuthToken } from './util/auth'
+import TodoForm from '../components/TodoForm'
 
 function TodoPage() {
+  if (!localStorage.getItem('access_token')) {
+    window.location.replace('/signin')
+  }
+
+  const removeToken = () => {
+    localStorage.removeItem('access_token')
+  }
+
   const data = useLoaderData()
+
   return (
-    <Suspense>
-      <Await resolve={data.todos}>
-        {(loadData) => <TodoList todos={loadData} />}
-      </Await>
-    </Suspense>
+    <>
+      <Link onClick={removeToken} to="/signin">
+        로그아웃
+      </Link>
+      <TodoForm method="POST" />
+      <Suspense>
+        <Await resolve={data.todos}>
+          {(loadData) => <TodoList todos={loadData} />}
+        </Await>
+      </Suspense>
+    </>
   )
 }
 
 export default TodoPage
 
 async function loadTodos() {
-  const token = getAuthToken()
+  const token = localStorage.getItem('access_token')
+  if (!token) {
+    window.location.replace('/signin')
+  }
   const response = await fetch(
     'https://www.pre-onboarding-selection-task.shop/todos',
     {
