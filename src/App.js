@@ -5,14 +5,23 @@ import TodoPage, { loader as todoLoader } from './pages/Todo'
 import HomePage from './pages/Home'
 import { action as signinAction } from './components/Login'
 import { action as signupAction } from './components/Register'
+import { action as todoAction } from './components/TodoForm'
 const router = createBrowserRouter([
   {
     path: '/',
     children: [
-      { index: true, element: <HomePage /> },
+      {
+        index: true,
+        element: <HomePage />,
+      },
       { path: 'signup', element: <SignupPage />, action: signupAction },
       { path: 'signin', element: <SigninPage />, action: signinAction },
-      { path: 'todo', element: <TodoPage />, loader: todoLoader },
+      {
+        path: 'todo',
+        element: <TodoPage />,
+        loader: todoLoader,
+        action: todoAction,
+      },
     ],
   },
 ])

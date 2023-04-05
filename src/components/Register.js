@@ -1,4 +1,4 @@
-import { Form, redirect } from 'react-router-dom'
+import { Form, redirect, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 
 function Register() {
@@ -6,6 +6,8 @@ function Register() {
   const [password, setPassword] = useState('')
   const [boolEmail, setBoolEmail] = useState(false)
   const [boolPassword, setBoolPassword] = useState(false)
+
+  const navigate = useNavigate()
 
   const checkEmail = (event) => {
     event.preventDefault()
@@ -25,6 +27,11 @@ function Register() {
     } else {
       setBoolPassword(false)
     }
+  }
+
+  const goLogin = (event) => {
+    event.preventDefault()
+    navigate('/signin')
   }
 
   return (
@@ -53,6 +60,9 @@ function Register() {
         {' '}
         회원가입{' '}
       </button>
+      <button data-testid="signin-button" onClick={goLogin}>
+        로그인
+      </button>
     </Form>
   )
 }
@@ -66,7 +76,6 @@ export async function action({ request, params }) {
     email: data.get('email'),
     password: data.get('password'),
   }
-  console.log(eventData)
   const response = await fetch(
     'https://www.pre-onboarding-selection-task.shop/auth/signup',
     {

@@ -75,7 +75,6 @@ export async function action({ request, params }) {
     email: data.get('email'),
     password: data.get('password'),
   }
-  console.log(eventData)
   const response = await fetch(
     'https://www.pre-onboarding-selection-task.shop/auth/signin',
     {
@@ -88,7 +87,11 @@ export async function action({ request, params }) {
   )
   const resData = await response.json()
   const token = resData.access_token
+  if (response.status === 200) {
+    localStorage.setItem('access_token', token)
+  } else {
+    window.alert('다시 로그인해주세요.')
+  }
 
-  localStorage.setItem('access_token', token)
   return redirect('/todo')
 }
