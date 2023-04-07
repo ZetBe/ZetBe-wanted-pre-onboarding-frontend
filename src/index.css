@@ -12,11 +12,12 @@ code {
     monospace;
 }
 
-form,
-ul,
-li,
-label {
-  width: 300px;
-  margin-left: auto;
-  margin-right: auto;
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
 }
