@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+프로젝트의 실행 방법
+데모 영상
+데모 영상은 배포 링크로 대체 가능하며, 배포가 되었고 배포된 사이트에서 기능이 모두 동작하면 가산점이 부여됩니다.
+배포된 사이트에서 기능이 정상동작 하지 않는다면 배포 가산점이 부여되지 않습니다
+기능이 정상 동작하지 않는 예시:
+새로고침하면 404 에러 페이지 표출
+"/" URL이 아닌 "/signup"등의 경로로 바로 접속할 경우 404 에러 페이지 표출 등
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 프로젝트 실행 방법
+1. git clone을 통해 해당 저장소를 clone합니다.
+```$ git clone https://github.com/ZetBe/wanted-pre-onboarding-frontend.git```
 
-## Available Scripts
+2. vsCode로 좌측 위에 File -> Open Folder -> clone한 저장소 폴더 선택합니다.
 
-In the project directory, you can run:
+3. 해당 폴더로 이동하면 좌측 위에 Terminal -> New Terminal 을 클릭하여 터미널을 엽니다.
 
-### `npm start`
+4. 터미널에서 해당 코드를 입력해서 먼저 설치합니다.
+```npm install```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+5. 마지막으로 해당 코드를 입력해서 실행합니다.
+```npm start```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 데모 영상
+예정
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 사이트 실행 과정
+예정
 
-### `npm run build`
+## 배포한 사이트 링크
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+https://wanted-pre-onboarding-fr-39654.web.app/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+해당 링크로 접속하면 볼 수 있습니다.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 이 사이트에서 사용한 api
 
-### `npm run eject`
+https://www.pre-onboarding-selection-task.shop/
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 이 사이트에서 사용한 라이브러리
+- React
+- React Router
+- Axios
