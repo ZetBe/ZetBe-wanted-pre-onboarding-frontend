@@ -30,6 +30,8 @@
 5. 마지막으로 해당 코드를 입력해서 실행합니다.
 ```npm start```
 
+(깃에서 바로 `npm install`, `npm start`를 입력해도 됩니다.)
+
 <br>
 <br>
 <br>
