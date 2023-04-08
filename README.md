@@ -4,6 +4,18 @@
 <br>
 <br>
 
+## 배포한 사이트 링크
+
+링크: https://wanted-pre-onboarding-fr-39654.web.app/
+
+해당 링크로 접속하면 볼 수 있습니다.
+
+<br>
+<br>
+<br>
+
+
+
 ## 프로젝트 실행 방법
 1. git clone을 통해 해당 저장소를 clone합니다.
 ```$ git clone https://github.com/ZetBe/wanted-pre-onboarding-frontend.git```
@@ -116,15 +128,7 @@ todo리스트에 체크하고 해당 부분을 수정하면 체크한 부분도 
 <br>
 <br>
 
-## 배포한 사이트 링크
 
-링크: https://wanted-pre-onboarding-fr-39654.web.app/
-
-해당 링크로 접속하면 볼 수 있습니다.
-
-<br>
-<br>
-<br>
 
 ## 이 사이트에서 사용한 api
 
